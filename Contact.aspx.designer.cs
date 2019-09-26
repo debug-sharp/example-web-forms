@@ -10,6 +10,6 @@
 namespace ExampleWebForms {
 
 
-	public partial class Contact {
-	}
+    public partial class Contact {
+    }
 }

@@ -7,9 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ExampleWebForms {
+namespace ExampleWebForms.Account
+{
 
 
-    public partial class _Default {
+    public partial class Lockout
+    {
     }
 }

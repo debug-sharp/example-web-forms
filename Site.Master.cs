@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Microsoft.AspNet.Identity;
 
 namespace ExampleWebForms
 {
@@ -17,6 +18,18 @@ namespace ExampleWebForms
 
         protected void Page_Init(object sender, EventArgs e)
         {
+
+
+
+
+            Desharp.Debug.Dump(this.Request.Url.AbsoluteUri, new Desharp.DumpOptions {
+                SourceLocation = true
+            });
+
+
+
+
+
             // The code below helps to protect against XSRF attacks
             var requestCookie = Request.Cookies[AntiXsrfTokenKey];
             Guid requestCookieGuidValue;
@@ -69,6 +82,11 @@ namespace ExampleWebForms
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
+        {
+            Context.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
         }
     }
 

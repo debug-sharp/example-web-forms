@@ -6,10 +6,9 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace ExampleWebForms {
-	public partial class _Default: Page {
-		protected void Page_Load (object sender, EventArgs e) {
-            Desharp.Debug.Dump(this.Request.Url);
-            
-		}
-	}
+    public partial class _Default: Page {
+        protected void Page_Load(object sender, EventArgs e) {
+
+        }
+    }
 }
